@@ -385,10 +385,131 @@ public class Loop {
 
         case 67:
 
+            /*
+            Realiza un programa que pinte una escalera que va descendiendo de izquierda
+            a derecha. El programa pedirá el número de escalones y la altura de cada
+            escalón. La anchura de los escalones siempre es la misma: 4 asteriscos.
+             */
+            System.out.println("Bienvenido al Ejercicio 67");
+            System.out.print("Introduzca el número de escalones: ");
+            int stepNumber_67 = s.nextInt();
+            System.out.print("Introduzca la altura de cada escalón: ");
+            int stepHeight_67 = s.nextInt();
+            int stepfill_67 = 4;
+            int countfill_67 = 0;
+
+            do {
+                do{
+                    for (int i = 0; i < stepfill_67; i++) {
+                        System.out.print("*");
+                    }
+                    System.out.println("");
+                    countfill_67++;
+
+                }while(countfill_67 != stepHeight_67);
+                countfill_67 = 0;
+                stepfill_67 += 4;
+                stepNumber_67--;
+            }while (stepNumber_67 != 0);
             break;
+
         case 68:
+            /*
+            Escribe un programa que pida un número por teclado y que luego lo “disloque” de tal forma que a cada dígito se le suma 1 si es par y se le resta 1 si
+            es impar. Usa long en lugar de int donde sea necesario para admitir números
+            largos.
+             */
+            System.out.println("Bienvenido al Ejercicio 68");
+            System.out.print("Por favor, introduzca un número: ");
+            long number_68 = s.nextInt();
+            long number_68_copy = number_68;
+            int digitCounter_68 = 0;
+            long result_68 = 0;
+            while(number_68_copy !=0){
+                number_68_copy = number_68_copy / 10;
+                digitCounter_68++;
+            }
+            int length10_68 = (int) Math.pow(10,digitCounter_68-1);
+            while(digitCounter_68 != 0){
+                long firstDigit_68 = number_68 / length10_68;
+
+                if (firstDigit_68 % 2 == 0){
+                    firstDigit_68++;
+                }else{
+                    firstDigit_68--;
+                }
+                result_68 = (result_68*10) + (firstDigit_68% 10);
+                digitCounter_68--;
+                length10_68 /= 10;
+            }
+            System.out.println("Dislocando el "+number_68+ " sale el "+result_68);
             break;
+
         case 69:
+            /*
+            Realiza un programa que pinte una pirámide maya. Por los lados, se trata
+            de una pirámide normal y corriente. Por el centro se van pintando líneas de
+            asteriscos de forma alterna (empezando por la superior): la primera se pinta,
+            la segunda no, la tercera sí, la cuarta no, etc. La terraza de la pirámide siempre
+            tiene 6 asteriscos, por tanto, las líneas centrales que se añaden a la pirámide
+            normal tienen 4 asteriscos. El programa pedirá la altura. Se supone que el
+            usuario introducirá un número entero mayor o igual a 3; no es necesario
+            comprobar los datos de entrada.
+             */
+            System.out.println("Bienvenido al Ejercicio 69");
+            System.out.print("Introduzca la altura de la pirámide maya: ");
+            int height_69 = s.nextInt();
+
+            int halfHeight_69 = height_69 - 1;
+            int piramidTop_69 = 6;
+            int piramidFill_69 = 2;
+            int piramidCounter_69 = 0;
+
+            do{
+                piramidCounter_69++;
+                if(piramidCounter_69 % 2 != 0){
+                    for (int i = 0; i < halfHeight_69; i++) {
+                        System.out.print(" ");
+                    }
+                    for (int i = 0; i < piramidTop_69; i++) {
+                        System.out.print("*");
+                    }
+                    piramidTop_69 += 4;
+
+                    System.out.println("");
+
+                }else{
+                    for (int i = 0; i < halfHeight_69; i++) {
+                        System.out.print(" ");
+                    }
+                    for (int i = 0; i < piramidFill_69; i++) {
+                        System.out.print("*");
+                    }
+
+                    for (int i = 0; i < 4; i++) {
+                        System.out.print(" ");
+                    }
+
+                    for (int i = 0; i < piramidFill_69; i++) {
+                        System.out.print("*");
+                    }
+                    piramidFill_69 += 2;
+                    System.out.println("");
+                }
+
+                halfHeight_69--;
+            }while (piramidCounter_69 != height_69);
+
+
+
+
+
+
+
+
+
+
+
             break;
 
 
