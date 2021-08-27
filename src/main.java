@@ -62,17 +62,6 @@ public class main {
 
             case 3:
                 RandomNumber randomNumber = new RandomNumber();
-                System.out.println("Ejercicio 22 (Serpiente)");
-                System.out.println("");
-                System.out.println("");
-                System.out.println("");
-                System.out.println("");
-                System.out.println("");
-                System.out.println("");
-                System.out.println("");
-                System.out.println("");
-                System.out.println("");
-                System.out.println("");
                 System.out.println("┌─────────────────────────────────────────────────────────────┐");
                 System.out.println("│   ● Ejercicio 22 (Serpiente)                                │");
                 System.out.println("├─────────────────────────────────────────────────────────────┤");
@@ -108,6 +97,40 @@ public class main {
             break;
 
             case 4:
+                Array1 array = new Array1();
+                System.out.println("┌─────────────────────────────────────────────────────────────┐");
+                System.out.println("│   ● Ejercicio 10 ()                                │");
+                System.out.println("├─────────────────────────────────────────────────────────────┤");
+                System.out.println("│   ● Ejercicio 11 ()                                    │");
+                System.out.println("├─────────────────────────────────────────────────────────────┤");
+                System.out.println("│   ● Ejercicio 12 ()              │");
+                System.out.println("├─────────────────────────────────────────────────────────────┤");
+                System.out.println("│   ● Ejercicio 13 ()          │");
+                System.out.println("├─────────────────────────────────────────────────────────────┤");
+                System.out.println("│   ● Ejercicio 14 ()  │");
+                System.out.println("├─────────────────────────────────────────────────────────────┤");
+                System.out.println("│   ● Ejercicio 15 ()            │");
+                System.out.println("├─────────────────────────────────────────────────────────────┤");
+                System.out.println("│   ● Ejercicio 16 ()    │");
+                System.out.println("├─────────────────────────────────────────────────────────────┤");
+                System.out.println("│   ● Ejercicio 17 ()                     │");
+                System.out.println("├─────────────────────────────────────────────────────────────┤");
+                System.out.println("│   ● Ejercicio 18 ()         │");
+                System.out.println("├─────────────────────────────────────────────────────────────┤");
+                System.out.println("│   ● Ejercicio 19 ()                          │");
+                System.out.println("├─────────────────────────────────────────────────────────────┤");
+                System.out.println("│   ● Ejercicio 20 ()        │");
+                System.out.println("├─────────────────────────────────────────────────────────────┤");
+                System.out.println("│   ● Ejercicio 21 ()        │");
+                System.out.println("└─────────────────────────────────────────────────────────────┘");
+                System.out.println("");
+                System.out.print("■ Introduzca el número del ejercicio que quiera comprobar: ");
+                int exerciseArray1 = Integer.parseInt(s.next());
+                System.out.println("");
+                System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+                System.out.println("");
+                array.selector(exerciseArray1);
+
                 break;
 
         }
