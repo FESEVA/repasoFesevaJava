@@ -184,14 +184,6 @@ public class Loop {
 
                 }while (piramidCount != heightPiramid1_63_copy);
             }
-
-            System.out.println("Altura 1: "+heightPiramid1_63);
-            System.out.println("Altura 2: "+heightPiramid2_63);
-            System.out.println("Diferencia Altura : "+piramidDifference_63);
-            System.out.println("Ancho 1: "+weightPiramid1_63);
-            System.out.println("Ancho 2: "+weightPiramid2_63);
-            System.out.println("Mitad 1: "+halfWeightPiramid1_63);
-            System.out.println("Mitad 2: "+halfWeightPiramid2_63);
             break;
 
         case 64:
@@ -233,9 +225,6 @@ public class Loop {
                     System.out.print("*");
                 }
                 System.out.println("");
-                System.out.println(heightRectangle_64);
-                System.out.println(weightRectangle_64);
-
                 System.out.println("1. Agrandarlo");
                 System.out.println("2. Achicarlo");
                 System.out.println("3. Cambiar la orientación");
@@ -421,7 +410,7 @@ public class Loop {
              */
             System.out.println("Bienvenido al Ejercicio 68");
             System.out.print("Por favor, introduzca un número: ");
-            long number_68 = s.nextInt();
+            long number_68 = s.nextLong();
             long number_68_copy = number_68;
             int digitCounter_68 = 0;
             long result_68 = 0;
@@ -499,17 +488,6 @@ public class Loop {
 
                 halfHeight_69--;
             }while (piramidCounter_69 != height_69);
-
-
-
-
-
-
-
-
-
-
-
             break;
 
 
