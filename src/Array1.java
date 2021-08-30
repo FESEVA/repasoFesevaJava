@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
 public class Array1 {
 
     public void selector(int exercise){
+
+            Scanner s = new Scanner(System.in);
 
             switch (exercise){
 
@@ -14,7 +18,54 @@ public class Array1 {
                     necesario.
                      */
 
+                    int [] startedArray_10 = new int[20] ;
+                    int [] endArray_10 = new int[20] ;
+                    int randomNumber_10 = 0;
+                    int parCounter_10 = 0;
+                    int counter_10 = 0;
+
+                    System.out.println("");
+                    System.out.println("Array original:");
+                    System.out.print("Indice");
+                    for (int i = 0; i < 20; i++) {
+                        System.out.printf("%5d",i);
+                    }
+                    System.out.println("");
+                    System.out.print("Valor ");
+                    for (int i = 0; i < 20; i++) {
+                        randomNumber_10 = (int) (Math.random() * 101);
+                        if (randomNumber_10 % 2 == 0){
+                            parCounter_10++;
+                        }
+                        startedArray_10[i] = randomNumber_10;
+                        System.out.printf("%5d", startedArray_10[i]);
+                    }
+                    System.out.println("");
+                    System.out.println("");
+
+                    System.out.println("Array Resultado:");
+                    System.out.print("Indice");
+                    for (int i = 0; i < 20; i++) {
+                        System.out.printf("%5d",i);
+                    }
+                    System.out.println("");
+                    System.out.print("Valor ");
+                    for (int i = 0; i < 20; i++) {
+
+                        if (startedArray_10[i] % 2 == 0){
+                            endArray_10[counter_10] = startedArray_10[i];
+                            counter_10++;
+                        }else{
+                            endArray_10[parCounter_10] = startedArray_10[i];
+                            parCounter_10++;
+                        }
+                    }
+                    for (int i = 0; i < 20; i++) {
+                        System.out.printf("%5d", endArray_10[i]);
+                    }
+                    System.out.println("");
                     break;
+
                 case 11:
                     System.out.println("Bienvenido al Ejercicio 11");
                     /*
@@ -25,6 +76,81 @@ public class Array1 {
                     son primos) de tal forma que no se pierda ninguno. Al final se debe mostrar el
                     array resultante.
                      */
+
+                    int [] startedArray_11 = new int[10];
+                    int [] endArray_11 = new int[10];
+                    int counter_11=0;
+                    int counter_0_11 = 0;
+                    int counter_primo_11 = 0;
+
+                    System.out.println("Introduzca 10 números");
+                    System.out.println("");
+                    for (int i = 0; i < 10; i++) {
+                        System.out.print("Número "+(i+1)+": ");
+                        startedArray_11[i] = s.nextInt();
+                    }
+                    System.out.println("");
+                    System.out.println("Array original:");
+                    System.out.print("Indice");
+                    for (int i = 0; i < 10; i++) {
+                        System.out.printf("%5d",i);
+                    }
+                    System.out.println("");
+                    System.out.print("Valor ");
+                    for (int i = 0; i < 10; i++) {
+                        System.out.printf("%5d", startedArray_11[i]);
+                    }
+                    System.out.println("");
+                    System.out.println("");
+
+                    for (int i = 0; i < 10; i++) {
+
+                        do {
+                            counter_11++;
+                           if (startedArray_11[i] % counter_11 == 0){
+                               counter_0_11++;
+                           }
+
+                        }while (startedArray_11[i] != counter_11);
+
+                        if (counter_0_11 == 2 && startedArray_11[i] != 1){
+                            endArray_11[counter_primo_11] = startedArray_11[i];
+                            counter_primo_11++;
+                        }
+                    counter_11 = 0;
+                    counter_0_11 = 0;
+                    }
+
+                    for (int i = 0; i < 10; i++) {
+                        do {
+                            counter_11++;
+                            if (startedArray_11[i] % counter_11 == 0){
+                                counter_0_11++;
+                            }
+
+                        }while (startedArray_11[i] != counter_11);
+
+                        if (counter_0_11 != 2){
+                            endArray_11[counter_primo_11] = startedArray_11[i];
+                            counter_primo_11++;
+                        }
+                        counter_11 = 0;
+                        counter_0_11 = 0;
+                    }
+
+
+                    System.out.println("Array resultado:");
+                    System.out.print("Indice");
+                    for (int i = 0; i < 10; i++) {
+                        System.out.printf("%5d",i);
+                    }
+                    System.out.println("");
+                    System.out.print("Valor ");
+                    for (int i = 0; i < 10; i++) {
+                        System.out.printf("%5d", endArray_11[i]);
+                    }
+                    System.out.println("");
+                    System.out.println("");
 
                     break;
                 case 12:
@@ -39,6 +165,71 @@ public class Array1 {
                     ninguno. Al final se debe mostrar el array resultante.
                      */
 
+                    int [] startedArray_12 = new int[10];
+                    int [] endArray_12 = new int[10];
+
+                    System.out.println("Introduzca 10 números");
+                    System.out.println("");
+                    for (int i = 0; i < 10; i++) {
+                        System.out.print("Número "+i+": ");
+                        startedArray_12[i] = s.nextInt();
+                    }
+
+                    System.out.println("");
+
+                    System.out.println("Array original:");
+                    System.out.print("Indice");
+                    for (int i = 0; i < 10; i++) {
+                        System.out.printf("%5d",i);
+                    }
+                    System.out.println("");
+                    System.out.print("Valor ");
+                    for (int i = 0; i < 10; i++) {
+                        System.out.printf("%5d", startedArray_12[i]);
+                    }
+                    
+                    System.out.println("");
+                    System.out.println("");
+
+                    System.out.print("Posición inicial: ");
+                    int initialPosition_12 = s.nextInt();
+                    System.out.print("Posición final: ");
+                    int endPosition_12 = s.nextInt();
+                    System.out.println("");
+
+                    if (initialPosition_12 >= endPosition_12 || initialPosition_12 < 0 || endPosition_12 > 9){
+                        System.out.println("Error, los datos introducidos no son correctos.");
+                        break;
+                    }
+                    for (int i = 0; i < 10; i++) {
+                        if (i == 0){
+                            endArray_12[i]= startedArray_12[9];
+                        }else if( i <= initialPosition_12){
+                            endArray_12[i]= startedArray_12[i-1];
+                        }else if (i < endPosition_12){
+                            endArray_12[i]= startedArray_12[i];
+                        }else if (i == endPosition_12){
+                            endArray_12[endPosition_12] = startedArray_12[initialPosition_12];
+                        }else if ( i > endPosition_12 && i != 9){
+                           endArray_12[i]= startedArray_12[i-1];
+                        }else {
+                            endArray_12[0] = startedArray_12[9];
+                            endArray_12[i] = startedArray_12[i-1];
+                        }
+                    }
+
+                    System.out.println("Array resultado:");
+                    System.out.print("Indice");
+                    for (int i = 0; i < 10; i++) {
+                        System.out.printf("%5d",i);
+                    }
+                    System.out.println("");
+                    System.out.print("Valor ");
+                    for (int i = 0; i < 10; i++) {
+                        System.out.printf("%5d", endArray_12[i]);
+                    }
+                    System.out.println("");
+                    System.out.println("");
                     break;
                 case 13:
                     System.out.println("Bienvenido al Ejercicio 13");
@@ -49,6 +240,59 @@ public class Array1 {
                     el número destacado entre dobles asteriscos.
                      */
 
+                    int [] initialArray_13 = new int[100];
+                    int randomNumber_13 = 0;
+                    int lowerNumber = 0;
+                    int higherNumber = 0;
+                    int counter_13 = 1;
+                    int arrayLineCalc = initialArray_13.length/5;
+                    for (int i = 0; i < initialArray_13.length; i++) {
+
+                        randomNumber_13 = (int) (Math.random() * 501);
+                        initialArray_13[i] = randomNumber_13;
+
+                        if ( initialArray_13[i] > higherNumber){
+                            higherNumber = initialArray_13[i];
+                        }
+                        System.out.print(initialArray_13[i]+" ");
+                        if (counter_13 == arrayLineCalc){
+                            System.out.println("");
+                            counter_13 = 0;
+                        }
+                            counter_13++;
+                    }
+                        lowerNumber = higherNumber;
+
+                    for (int i = 0; i < initialArray_13.length; i++) {
+                        if(initialArray_13[i]<lowerNumber){
+                            lowerNumber = initialArray_13[i];
+                        }
+                    }
+                    System.out.println("");
+                    System.out.print("¿Qué quiere destacar? (1 – mínimo, 2 – máximo): ");
+                        int selection_13 = s.nextInt();
+
+                    counter_13 = 1;
+                    System.out.println("");
+                    for (int i = 0; i < initialArray_13.length; i++) {
+
+                        if(initialArray_13[i] == lowerNumber && selection_13 == 1){
+
+                            System.out.print("**"+initialArray_13[i]+"** ");
+
+                        }else if (initialArray_13[i] == higherNumber && selection_13 == 2){
+                            System.out.print("**"+initialArray_13[i]+"** ");
+                        }else{
+                            System.out.print(initialArray_13[i]+" ");
+                        }
+
+                        if (counter_13 == arrayLineCalc){
+                            System.out.println("");
+                            counter_13 = 0;
+                        }
+                        counter_13++;
+
+                    }
                     break;
                 case 14:
                     System.out.println("Bienvenido al Ejercicio 14");
@@ -61,6 +305,154 @@ public class Array1 {
                     blanco y morado.
                      */
 
+                    String[] color_14 = {"verde", "rojo", "azul", "amarillo", "naranja", "rosa", "negro", "blanco", "morado"};
+
+                    String [] word_14 = new String[8];
+                    String [] endWord_14 = new String[8];
+                    int colorCounter_14 = 0;
+                    int counter_14 = 0;
+
+                    System.out.println("Introduzca 8 palabras");
+
+                    for (int i = 0; i < word_14.length; i++) {
+                        System.out.print("Palabra "+i+": ");
+                            word_14[i]= s.next();
+                        for (int j = 0; j < color_14.length; j++) {
+                            if (word_14[i].equals(color_14[j])){
+                                colorCounter_14++;
+                            }
+                        }
+                    }
+                    System.out.println("");
+                    System.out.println("Array original:");
+                    System.out.print("┌");
+                    for (int i = 0; i < 8; i++) {
+                        for (int j = 0; j < 8; j++) {
+                            System.out.print("─");
+                        }
+                        if(i != 7){
+                            System.out.print("┬");
+                        }else{
+                            System.out.print("┐");
+                        }
+                    }
+                    System.out.println("");
+                    System.out.print("│");
+                    for (int i = 0; i < 8; i++) {
+
+                        for (int j = 0; j < 3; j++) {
+                            System.out.print(" ");
+                        }
+                        System.out.print(i);
+                        for (int j = 0; j < 4; j++) {
+                            System.out.print(" ");
+                        }
+                        System.out.print("│");
+                    }
+                    System.out.println("");
+                    System.out.print("├");
+                    for (int i = 0; i < 8; i++) {
+                        for (int j = 0; j < 8; j++) {
+                            System.out.print("─");
+                        }
+                        if(i != 7){
+                            System.out.print("┼");
+                        }else{
+                            System.out.print("┤");
+                        }
+                    }
+                    System.out.println("");
+                    System.out.print("│");
+                    for (int i = 0; i < 8; i++) {
+
+                        System.out.printf("%-8s",word_14[i]);
+                        System.out.print("│");
+                    }
+                    System.out.println("");
+                    System.out.print("└");
+                    for (int i = 0; i < 8; i++) {
+                        for (int j = 0; j < 8; j++) {
+                            System.out.print("─");
+                        }
+                        if(i != 7){
+                            System.out.print("┴");
+                        }else{
+                            System.out.print("┘");
+                        }
+                    }
+                    System.out.println("");//Result----------------------------------------------------------------
+                    System.out.println("Array resultado:");
+                    System.out.print("┌");
+                    for (int i = 0; i < 8; i++) {
+                        for (int j = 0; j < 8; j++) {
+                            System.out.print("─");
+                        }
+                        if(i != 7){
+                            System.out.print("┬");
+                        }else{
+                            System.out.print("┐");
+                        }
+                    }
+                    System.out.println("");
+                    System.out.print("│");
+                    for (int i = 0; i < 8; i++) {
+
+                        for (int j = 0; j < 3; j++) {
+                            System.out.print(" ");
+                        }
+                        System.out.print(i);
+                        for (int j = 0; j < 4; j++) {
+                            System.out.print(" ");
+                        }
+                        System.out.print("│");
+                    }
+                    System.out.println("");
+                    System.out.print("├");
+                    for (int i = 0; i < 8; i++) {
+                        for (int j = 0; j < 8; j++) {
+                            System.out.print("─");
+                        }
+                        if(i != 7){
+                            System.out.print("┼");
+                        }else{
+                            System.out.print("┤");
+                        }
+                    }
+                    System.out.println("");
+                    for (int i = 0; i < 8; i++) {
+                        boolean validator_14 = false;
+                        for (int j = 0; j < 9 ; j++) {
+                            if (word_14[i].equals(color_14[j])){
+                                endWord_14[counter_14] = word_14[i];
+                                counter_14++;
+                                validator_14 = true;
+                            }
+                        }
+
+                        if(validator_14 == false) {
+                            endWord_14[colorCounter_14] = word_14[i];
+                            colorCounter_14++;
+                        }
+
+                    }
+                    System.out.print("│");
+                    for (int i = 0; i < 8; i++) {
+                        System.out.printf("%-8s",endWord_14[i]);
+                        System.out.print("│");
+                    }
+                    System.out.println("");
+                    System.out.print("└");
+                    for (int i = 0; i < 8; i++) {
+                        for (int j = 0; j < 8; j++) {
+                            System.out.print("─");
+                        }
+                        if(i != 7){
+                            System.out.print("┴");
+                        }else{
+                            System.out.print("┘");
+                        }
+                    }
+                    System.out.println("");
                     break;
                 case 15:
                     System.out.println("Bienvenido al Ejercicio 15");
